@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+	
+	var mutableData : String =  "Hello World"
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,8 +21,66 @@ class ViewController: UIViewController {
 		self.view.backgroundColor = .green
 		let label = UILabel()
 		label.frame = CGRect.init(x: 150, y: 300, width: 100, height: 30)
+		label.textColor = .red
 		label.text = "Hello World"
 		self.view.addSubview(label)
+		
+		self.processData()
+		print(self.mutableData)
+		
+		self.mutableData = self.pureProcessData()
+		print(self.mutableData)
+		
+		// list
+		let listInt = [1,2,3,4,5,6,7,8,9,0];
+		print(listInt)
+		
+		// map
+		let listStr = listInt.map({num in
+			return "\(num)"
+		})
+		print(listStr)
+		
+		// filter
+		let listOddNum = listInt.filter({num in
+			return num % 2 == 1
+		})
+		print(listOddNum)
+		
+		// reduce
+		let sum = listInt.reduce(0, {prev, num in
+			prev + num
+		})
+		print(sum)
+		
+		// reduce with filter
+		let sumOfOdd = listInt.filter({num in
+			return num % 2 == 1
+		}).reduce(0, {prev, num in
+			prev + num
+		})
+		print(sumOfOdd)
+		
+		let data1 : SingleData = SingleData.getObj()
+		let data2 : SingleData = SingleData.getObj()
+		let data3 : SingleData = SingleData.getObj()
+		
+		data2.setInfo(newInfo: "This is the data of data 2\n")
+		print(data1.getInfo(), data2.getInfo(), data3.getInfo())
+		
+		let vehicle : Vehicle = VehicleBuilder()
+			.setFuelType(fuelType: .diesel)
+			.setNbOfPassenger(nbOfPassenger: 8)
+			.setNbOfWheels(nbOfWheels: 6)
+			.buildVehicle()
+		
+		print(vehicle.description)
+		
+		let animalCreateor : AnimalCreateor = AnimalCreateor()
+		let cat: Animal = animalCreateor.creatAnimal(isDog: false)
+		let dog: Animal = animalCreateor.creatAnimal(isDog: true)
+		cat.makeNoise()
+		dog.makeNoise()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +99,14 @@ class ViewController: UIViewController {
 	
 	func test2(_ value: String) {
 		print("test2 -> \(value)")
+	}
+	
+	func processData() {
+		self.mutableData = "text1"
+	}
+	
+	func pureProcessData() -> String{
+		return "text2"
 	}
 }
 
