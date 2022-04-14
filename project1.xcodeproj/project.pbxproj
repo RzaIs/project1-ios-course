@@ -15,6 +15,7 @@
 		32212FB52804BE87000869A9 /* SingleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32212FB42804BE87000869A9 /* SingleData.swift */; };
 		32212FB72804BEDB000869A9 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32212FB62804BEDB000869A9 /* Vehicle.swift */; };
 		32212FB92804BF01000869A9 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32212FB82804BF01000869A9 /* Animal.swift */; };
+		322843E32808B46E00051EE1 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322843E22808B46E00051EE1 /* Prototype.swift */; };
 		32773BFF28035ABF001AF044 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32773BFE28035ABF001AF044 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		32212FB42804BE87000869A9 /* SingleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleData.swift; sourceTree = "<group>"; };
 		32212FB62804BEDB000869A9 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		32212FB82804BF01000869A9 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		322843E22808B46E00051EE1 /* Prototype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prototype.swift; sourceTree = "<group>"; };
 		32773BFE28035ABF001AF044 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				32212FB42804BE87000869A9 /* SingleData.swift */,
 				32212FB62804BEDB000869A9 /* Vehicle.swift */,
 				32212FB82804BF01000869A9 /* Animal.swift */,
+				322843E22808B46E00051EE1 /* Prototype.swift */,
 			);
 			path = project1;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			files = (
 				320DBD32280209EA000FACE6 /* ViewController.swift in Sources */,
 				320DBD2E280209EA000FACE6 /* AppDelegate.swift in Sources */,
+				322843E32808B46E00051EE1 /* Prototype.swift in Sources */,
 				32773BFF28035ABF001AF044 /* SceneDelegate.swift in Sources */,
 				32212FB72804BEDB000869A9 /* Vehicle.swift in Sources */,
 				32212FB52804BE87000869A9 /* SingleData.swift in Sources */,
@@ -297,8 +301,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = project1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -313,6 +319,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = is.rza.project1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -324,8 +331,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = project1/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -340,6 +349,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = is.rza.project1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

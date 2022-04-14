@@ -47,30 +47,31 @@ class Vehicle : CustomStringConvertible {
 			return _nbOfWheels
 		}
 	}
+    
+    class VehicleBuilder {
+        private var vehicle : Vehicle = Vehicle()
+        
+        public func setFuelType(fuelType : FuelType) -> VehicleBuilder {
+            self.vehicle.fuelType = fuelType
+            return self
+        }
+        
+        public func setNbOfPassenger(nbOfPassenger : Int) -> VehicleBuilder {
+            self.vehicle.nbOfPassenger = nbOfPassenger
+            return self
+        }
+        
+        public func setNbOfWheels(nbOfWheels : Int) -> VehicleBuilder {
+            self.vehicle.nbOfWheels = nbOfWheels
+            return self
+        }
+        
+        public func buildVehicle() -> Vehicle {
+            return self.vehicle
+        }
+    }
 }
 
-class VehicleBuilder {
-	private var vehicle : Vehicle = Vehicle()
-	
-	public func setFuelType(fuelType : FuelType) -> VehicleBuilder {
-		self.vehicle.fuelType = fuelType
-		return self
-	}
-	
-	public func setNbOfPassenger(nbOfPassenger : Int) -> VehicleBuilder {
-		self.vehicle.nbOfPassenger = nbOfPassenger
-		return self
-	}
-	
-	public func setNbOfWheels(nbOfWheels : Int) -> VehicleBuilder {
-		self.vehicle.nbOfWheels = nbOfWheels
-		return self
-	}
-	
-	public func buildVehicle() -> Vehicle {
-		return self.vehicle
-	}
-}
 
 enum FuelType {
 	case benzin, diesel
