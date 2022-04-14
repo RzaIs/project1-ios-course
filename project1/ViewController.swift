@@ -31,35 +31,7 @@ class ViewController: UIViewController {
 		self.mutableData = self.pureProcessData()
 		print(self.mutableData)
 		
-		// list
-		let listInt = [1,2,3,4,5,6,7,8,9,0];
-		print(listInt)
 		
-		// map
-		let listStr = listInt.map({num in
-			return "\(num)"
-		})
-		print(listStr)
-		
-		// filter
-		let listOddNum = listInt.filter({num in
-			return num % 2 == 1
-		})
-		print(listOddNum)
-		
-		// reduce
-		let sum = listInt.reduce(0, {prev, num in
-			prev + num
-		})
-		print(sum)
-		
-		// reduce with filter
-		let sumOfOdd = listInt.filter({num in
-			return num % 2 == 1
-		}).reduce(0, {prev, num in
-			prev + num
-		})
-		print(sumOfOdd)
 		
 		let data1 : SingleData = SingleData.getObj()
 		let data2 : SingleData = SingleData.getObj()
@@ -68,7 +40,7 @@ class ViewController: UIViewController {
 		data2.setInfo(newInfo: "This is the data of data 2\n")
 		print(data1.getInfo(), data2.getInfo(), data3.getInfo())
 		
-		let vehicle : Vehicle = VehicleBuilder()
+        let vehicle : Vehicle = Vehicle.VehicleBuilder()
 			.setFuelType(fuelType: .diesel)
 			.setNbOfPassenger(nbOfPassenger: 8)
 			.setNbOfWheels(nbOfWheels: 6)
@@ -81,6 +53,19 @@ class ViewController: UIViewController {
 		let dog: Animal = animalCreateor.creatAnimal(isDog: true)
 		cat.makeNoise()
 		dog.makeNoise()
+        
+        let protobase = ProtoClassBase(data1: "data1", data2: "data2")
+        let protobaseClone = ProtoClassBase(obj: protobase)
+        
+        let proto = ProtoClass(baseObj: protobase, data3: "data3")
+        let protoClone = ProtoClass(obj: proto)
+        
+        print("protobase", protobase.data1, protobase.data2, protobase)
+        print("protobaseClone", protobaseClone.data1, protobaseClone.data2, protoClone)
+        
+        print("proto", proto.data1, proto.data2, proto.data3, proto)
+        print("protoClone", protoClone.data1, protoClone.data2, protoClone.data3, protoClone)
+
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -110,3 +95,35 @@ class ViewController: UIViewController {
 	}
 }
 
+
+func MapFilterReduce() {
+    // list
+    let listInt = [1,2,3,4,5,6,7,8,9,0];
+    print(listInt)
+    
+    // map
+    let listStr = listInt.map({num in
+        return "\(num)"
+    })
+    print(listStr)
+    
+    // filter
+    let listOddNum = listInt.filter({num in
+        return num % 2 == 1
+    })
+    print(listOddNum)
+    
+    // reduce
+    let sum = listInt.reduce(0, {prev, num in
+        prev + num
+    })
+    print(sum)
+    
+    // reduce with filter
+    let sumOfOdd = listInt.filter({num in
+        return num % 2 == 1
+    }).reduce(0, {prev, num in
+        prev + num
+    })
+    print(sumOfOdd)
+}
