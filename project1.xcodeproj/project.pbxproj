@@ -17,6 +17,7 @@
 		32212FB92804BF01000869A9 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32212FB82804BF01000869A9 /* Animal.swift */; };
 		322843E32808B46E00051EE1 /* Prototype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322843E22808B46E00051EE1 /* Prototype.swift */; };
 		32773BFF28035ABF001AF044 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32773BFE28035ABF001AF044 /* SceneDelegate.swift */; };
+		378815CE280B18B50076B3A7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 378815CD280B18B50076B3A7 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378815CE280B18B50076B3A7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +97,9 @@
 			dependencies = (
 			);
 			name = project1;
+			packageProductDependencies = (
+				378815CD280B18B50076B3A7 /* SnapKit */,
+			);
 			productName = project1;
 			productReference = 320DBD2A280209EA000FACE6 /* project1.app */;
 			productType = "com.apple.product-type.application";
@@ -123,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 320DBD21280209EA000FACE6;
+			packageReferences = (
+				378815CC280B18B50076B3A7 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 320DBD2B280209EA000FACE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -378,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		378815CC280B18B50076B3A7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		378815CD280B18B50076B3A7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 378815CC280B18B50076B3A7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 320DBD22280209EA000FACE6 /* Project object */;
 }
